@@ -14,11 +14,7 @@
  *= require_self
  */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
 
 body {
     background-color: #fff;
@@ -29,9 +25,20 @@ body {
     margin: 33px;
 }
 
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+
 p, ol, ul, td {
     font-family: verdana, arial, helvetica, sans-serif;
     font-size: 13px;
     line-height: 18px;
     margin: 33px;
 }
+
+
+
