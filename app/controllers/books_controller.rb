@@ -6,16 +6,16 @@ class BooksController < ApplicationController
   def create
     book=Book.new(book_params)
     book.save
-    rediect_to'/show'
+    rediect_to'books'
   end
 
 
   def index
     @books=Book.all#これで投稿したのが出る
-   
   end
 
   def show
+    @book=Book.new
   end
 
   def edit
@@ -23,7 +23,7 @@ class BooksController < ApplicationController
   
  private
   # ストロングパラメータ
-  def list_params
-    params.require(:list).permit(:title, :body)
+  def book_params
+    params.require(:book).permit(:title, :body)
   end
 end
