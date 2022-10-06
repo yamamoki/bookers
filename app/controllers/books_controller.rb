@@ -3,19 +3,22 @@ class BooksController < ApplicationController
     #@book=Book.new
   #end
   
-  def create
-    book=Book.new(book_params)
-    book.save
-    rediect_to'books'
-  end
+  
 
 
   def index
     @books=Book.all#これで投稿したのが出る
+    @book=Book.new
+  end
+  
+  def create
+    book=Book.new(book_params)
+    book.save
+    redirect_to'/show'
   end
 
   def show
-    @book=Book.new
+    
   end
 
   def edit
