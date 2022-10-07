@@ -8,7 +8,7 @@ class BooksController < ApplicationController
 
   def index
     @books=Book.all#これで投稿したのが出る
-    @book=Book.new
+    #@book=Book.new
   end
   
   def create
