@@ -17,7 +17,7 @@
   <td><%= book.body %></td>
   <td><%= link_to 'Show', show_path %></td>
   <td><%= link_to 'Edit', '/edit' %>
-  <%= link_to 'Destroy', book_path(@book.id),method: :delete, "data-confirm"=>"Are you sure?" %>
+  <%= link_to 'Destroy', book_path(@book.id),method: :delete,"data-confirm" => "Are you sure?" %>
   </tr>
   <% end %>
  </tbody>

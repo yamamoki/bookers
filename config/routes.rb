@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  get 'books' => 'books#index'
-  post 'books' => 'books#create'
+  #get 'books' => 'books#index'
+  #post 'books' => 'books#create'
   get '/' => 'homes#top'
   get '/show' => 'books#show'
-  get '/edit' => 'books#edit'
-  #get 'books/edit'
+  #get '/edit' => 'books#edit'
+ 
   
 
   resources :books
