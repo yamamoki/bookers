@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   post 'books' => 'books#create'
   get '/' => 'homes#top'
   get '/show' => 'books#show'
+  get '/edit' => 'books#edit'
   #get 'books/edit'
+  
 
   resources :books
  
