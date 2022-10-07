@@ -14,7 +14,7 @@ class BooksController < ApplicationController
   def destroy
     book=Book.find(params[:id])
     book.destroy
-    redirect_to'/index'
+    redirect_to '/index', notice: 'Are you sure?'
   end
   
   def create
@@ -28,7 +28,7 @@ class BooksController < ApplicationController
   end
 
   def edit
-   # @book=Book.find(params[:id])
+   #@book=Book.find(params[:id])
   end
   
  private

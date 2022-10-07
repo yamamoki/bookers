@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get '/show' => 'books#show'
   get '/edit' => 'books#edit'
   #get 'books/edit'
-  
+  delete 'books/:id' => 'books#destroy', as: 'destroy_book'
 
   resources :books
  
