@@ -17,19 +17,24 @@ class BooksController < ApplicationController
     redirect_to'/books'
   end
 
-  def create
+  def create#保存機能
     book=Book.new(book_params)
-    book.save
-    redirect_to'/show'
+    if book.save
+    #投稿が成功
+    flash[:notice] ="Book was successfully created."
+    redirect_to '/show'
+    end 
+    
+    #redirect_to'/show'
   end
 
   def show
-    @book=Book.find(params[:id])
+    #@book=Book.find(params[:id])
     
   end
 
   def edit
-   #@book=Book.find(params[:id])
+    #@book=Book.find(params[:id])
   end
 
  private
