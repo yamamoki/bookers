@@ -22,7 +22,7 @@ class BooksController < ApplicationController
     if @book.save
     #投稿が成功
     flash[:notice] ="Book was successfully created."
-    redirect_to '/show'
+    redirect_to book_path(@book)
     else
     @books=Book.all
     render :index
